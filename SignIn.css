@@ -1,0 +1,170 @@
+* {
+    font-family: avenir;
+    color: white;
+    font-size: 22px;
+}
+
+#title {
+    color: white;
+    font: 55px avenir-medium;
+    position: relative;
+    text-align: center;
+    top: 5%;
+    left: 35px;
+}
+
+#logo {
+    height: 120px;
+    position: relative;
+    left: 300px;
+    top: -120px;
+}
+
+body {
+    background: url('bg1.jpg') fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}  
+
+input {
+    color: #717070;
+    position: absolute;
+    border:none;
+    border-bottom: 1px solid #717070;
+    padding-bottom: 7px;
+    padding-left: 15px;
+    width: 400px;
+    outline:none;
+}
+
+#continueButton {
+    color: white;
+    background-color: #2B6D6A;
+    border: none;
+    outline: none;
+    font-family: avenir-book;
+    font-size: 30px;
+    transition: 0.5s;
+    position: absolute;
+    width: 500px;
+    height: 70px;
+    top: 300px;
+    left: 0px;
+}
+
+#arrow2 {
+    width: 70px;
+    position: absolute;
+    left: 670px;
+    top: 537px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+#continueButton:hover {
+    color: #2B6D6A;
+    background-color: white;
+    box-shadow: 0px 5px 70px 0px rgba(0, 0, 0, 0.7);
+}
+
+.signUpButton {
+    font-size: 25px;
+    color: #2B6D6A;
+    background-color: white;
+    border: none;
+    outline: none;
+    width: 130px;
+    height: 80px;
+    transition: 0.5s;
+    position:absolute;
+    right: 0px;
+    top:0px;
+}
+
+.signUpButton:hover {
+    color: white;
+    background-color: #2B6D6A;
+    box-shadow: 0px 0px 70px 1px rgba(0, 0, 0, 0.7);
+}
+
+#signIn {
+    font-size: 35px;
+    text-align: center;
+    position: relative;
+    top: -340px;
+}
+
+#box {
+    background-color: white;
+    margin: auto;
+    width: 500px;
+    height: 180px;
+    position: relative;
+    top: -40px;
+    box-shadow: 0px 0px 200px 1px black;
+}
+
+.icons {
+    width: 60px;
+}   
+
+#studentBox {
+    top: 22px;
+    left: 60px;
+}
+
+#passwordBox {
+    top: 91px;
+    left: 60px;
+}
+
+#studentBox:focus {
+    color: #2B6D6A;
+}
+
+#passwordBox:focus {
+    color: #2B6D6A;
+}
+
+#underline {
+    border-bottom: 2px #2B6D6A solid;
+    position: relative;
+    left: 60px;
+    top: -80px;
+    width: 0px;
+    transition: 0.3s;
+}
+
+#underline2 {
+    border-bottom: 2px #2B6D6A solid;
+    position: relative;
+    left: 60px;
+    top: -73px;
+    width: 0px;
+    transition: 0.3s;
+}
+
+#invalid {
+    color: #E9271C;
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+    font-size: 18px;
+    visibility: hidden;
+}
+
+#forgot {
+    color:#2B6D6A;
+    font-family: avenir-book;
+    font-size: 18px;
+    position: absolute;
+    bottom: 0px;
+    right:25px;
+}
+
+#forgot:hover {
+    color: #717070;
+}

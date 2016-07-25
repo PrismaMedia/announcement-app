@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Announcements</title>
+    <link rel="icon" type="image/png" href="icon.png">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="submitAnnouncement.js"></script>
+    <script src="displayName.js"></script>
+    <script src="parallax.js"></script>
+    <script src="headerScroll.js"></script>
+    <style>
+        
+        * {
+                color: #4A4A4A;
+                font-family: avenir;
+                font-size: 35px;
+        }
+        
+        #header {
+                position: fixed;
+                left: -20px;
+                top: -70px;
+                width:120%;
+                height:160px;
+                transition: 0.3s;
+        }
+
+        #title {
+                position: relative;
+                text-align: center;
+                margin-top: 60px;
+                top: 40px;
+        }
+        
+        #headerTitle {
+                position: fixed;
+                top: 15px;
+                left: 120px;
+                color: white;
+                font-family: avenir-light;
+                text-decoration: none;
+                transition: 0.3s;
+        }  
+        
+        #logo {
+                height: 75px;
+                position: fixed;
+                left: 45px;
+                top: 6px;
+                transition: 0.3s;
+        }
+            
+        #navbarList {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color:white;
+                position: fixed;
+                top: 80px;
+                left: 0px;
+                width: 100%;
+                box-shadow: 0px 0px 30px 0px black;
+                transition: 0.3s;
+        }
+            
+        li {
+                float: left;
+            }
+            
+        li a {
+                display: block;
+                font-size: 20px;
+                color: #4A4A4A;
+                text-align: center;
+                position: relative;
+                left: 50px;
+                padding: 10px 160px;
+                text-decoration: none;
+                transition: 0.3s;
+        }
+            
+        li a:hover {
+                background-color: #afafaf;
+                color: white;
+        }
+            
+        #homeHeader {
+                background-color: #2B6D6A;
+                color: white;
+                cursor: default;
+        }
+        
+        #studentNumber {
+                position: fixed;
+                top: 0px;
+                right: 30px;
+                text-align: right;
+                color: white;
+                font-size: 25px;
+                transition: 0.3s;
+                z-index: 7;
+        }
+        
+        #navbar {
+                position: absolute;
+                z-index: 5;
+        }
+            
+        .card {
+                color: #2B6D6A;
+                background-color: white;
+                position: relative;
+                padding: 15px 15px 0px 25px;
+                text-align: cee;
+                font-family: avenir-heavy;
+                font-size: 25px;
+                top: 0px;
+                height: 150px;
+                width: 600px;
+                margin: auto;
+                margin-bottom: 0px;
+                border-radius: 3px;
+        }
+        
+        .titleOfCard {
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                transition: all 0.2s ease-in-out;
+        }
+        
+        .titleOfCard:hover {
+                box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        }
+        
+        .groupIcon {
+                position: relative;
+                left: 345px;
+                top: -105px;
+                float: left;
+                height: 25px;
+                width: 25px;
+                z-index: 2;
+        }
+        
+        .club {
+                color: #888888;
+                background-color: none;
+                top: -115px;
+                left: -70px;
+                font-family: avenir-light;
+                font-size: 15px;
+                width: 400px;
+                height: 20px;
+                margin-bottom: 0px;
+                box-shadow: none;
+        }
+        
+        .timeIcon {
+                position: relative;
+                top: -140px;
+                left: 520px;
+                width: 25px;
+                height: 25px;
+        }
+        
+        .time {
+                color: #888888;
+                background-color: none;
+                top: -150px;
+                left: 56px;
+                font-family: avenir-light;
+                font-size: 15px;
+                width: 300px;
+                height: 20px;
+                margin-bottom: 0px;
+                box-shadow: none;
+        }
+
+        .content {
+                font-size: 18px;
+                top: -150px;
+                left: 0px;
+                height: 50px;
+                width: 600px;
+                margin-bottom: -260px;
+        }
+        
+        .priority {
+                position: relative;
+                top: -40px;
+                left: 325px;
+                height: 165px;
+                width: 12px;
+                border-radius: 3px 0px 0px 3px;
+        }
+        
+        #bg2 {
+                position: fixed;
+                width: 105%;
+                height: 480px;
+                left:-20px;
+                top: 0px;
+        }
+        
+        #noAnnouncements {
+                text-align: center;
+                margin-top: 90px;
+                font-size: 25px;
+        }
+        
+        #announcementsWrapper {
+                background-color: #D6D6D6;
+                position: relative;
+                width: 102%;
+                min-height: 200px;
+                top: 500px;
+                left: -15px;
+                margin-top: -80px;
+                padding-bottom: 30px;
+                box-shadow: 0px -10px 40px 0px rgba(0,0,0,0.6);
+        }
+        
+        #gender {
+            position: relative;
+        }
+        
+        
+        
+        #update {
+            position: relative;
+        }
+    </style>
+    </head>
+
+<body onload="displayName()">
+        <img id="bg2" src="bg2.jpg" />
+        <div id="announcementsWrapper">
+        <h1 id="title">Announcements</h1>
+        <p id="noAnnouncements"></p>
+        </div>
+
+        <select id="gender">
+            <option selected disabled value="gender">Choose gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    
+        <button id="update" onclick="filter()">Update Announcements</button>
+    
+    <!-----------------------Navbar----------------------->
+    <div id="navbar">
+    <img id="header" src="header.jpg" />
+        
+    <p><a id="headerTitle" href="announcements.html">eAnnouncements</a></p>
+    <p id="studentNumber"></p>
+        
+        <ul id="navbarList">
+            <li><a id="homeHeader">Home</a></li>
+            <li><a href="Create.html">Create</a></li>
+            <li><a>Calendar</a></li>
+            </ul>
+        
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+        </div>
+    </body>
+    
+</html>

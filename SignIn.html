@@ -1,0 +1,61 @@
+<!---- MIT KAPADIA | ICS3UH-B | APRIL 25, 2016 ---->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">        
+        <title>eAnnouncements</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="stylesheet" type="text/css" href="SignIn.css">
+        
+        <!------------------Links all the JavaScript pages------------------>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="submitUser.js"></script>
+        <script src="hover.js"></script>
+        <script src="underline.js"></script>
+    </head>
+
+    <body>
+        <!----------------------------Heading and Logo---------------------------->
+        <h1 id="title">eAnnouncements</h1>
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+            
+        <!--------------------Sign Up Button---------------------->
+        <a href="SignUp.html">
+            <button class="signUpButton" style="border:none">Sign Up</button>
+        </a>
+        
+        <!----Student # and Password Box---->
+        <div id="box">
+            <!---------------------------Username Icon--------------------------->
+            <object type="image/svg+xml" data="username.svg" id="user" class="icons">Your browser does not support SVG</object><br>
+            
+            <!---------------------------Password Icon--------------------------->
+            <object type="image/svg+xml" data="password.svg" id="password" class="icons">Your browser does not support SVG</object>
+            
+            <!---------------------------Username Input--------------------------->
+            <input type="text" placeholder="Student Number" id="studentBox"
+                   onkeydown = "if (event.keyCode == 13)
+                                document.getElementById('continueButton').click()">
+            <div id="underline"></div><br><br>
+                        
+            <!---------------------------Password Input--------------------------->
+            <input type="password" placeholder="Password" id="passwordBox" 
+                   onkeydown = "if (event.keyCode == 13)
+                                document.getElementById('continueButton').click()">
+            <div id="underline2"></div>
+                        
+            <!---------------------------Continue Button--------------------------->
+            <input type="button" value="Continue" id="continueButton" onclick="submitUser()">
+            
+            <p id="invalid"></p>
+                    
+            <!---------------------------Forgot Password--------------------------->
+            <a href="https://www.google.ca/?gfe_rd=cr&ei=IcrTVqHgLOeM8QesuYGwDA&gws_rd=ssl"><p id="forgot">Forgot Password</p></a>
+        </div>
+                
+        <!---------Arrow for the continue button--------->
+        <img id="arrow2" src="arrows2.png" />
+        <p id="signIn">Sign In</p>
+    </body>
+</html>

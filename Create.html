@@ -1,0 +1,131 @@
+<!---- MIT KAPADIA | ICS3UH-B | APRIL 25, 2016 ---->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Create</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="stylesheet" type="text/css" href="Create.css">
+        
+        <!------------------Links all the JavaScript pages------------------>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="submitAnnouncement.js"></script>
+        <script src="iconForHeader.js"></script>
+        <script src="displayName.js"></script>
+        <script src="parallax.js"></script>
+        <script src="hover.js"></script>
+        <script src="headerScroll.js"></script>
+        <script src="footer.js"></script>
+    </head>
+
+    <body onload="displayName(); picture()">
+        <!----------------------Background Video and Title---------------------->
+        <video autoplay controls muted poster="flower.png" id="bgPic" loop>
+            <source src="nature.mp4" type="video/mp4">
+        </video>
+        
+        <!---------------Footer--------------->
+        <div id="footer">Created by Mit Kapadia
+        <img id="icicles" src="icicles.png"/>
+        </div>
+
+        <h1 id="pageTitle">Create Announcement</h1>
+        
+        <!------------Contains all the announcement creation content------------>
+        <div id="bodyContainer">
+            <!-----------------------------Headings----------------------------->
+            <h1 class="title" style="position:relative; top:50px">Add Filters</h1>
+            <h1 class="title" style="position:relative; top: 270px">Write Announcement</h1>
+        
+        <!-------------Form for selecting all the announcement info------------>
+        <form id="makeAnnouncement">
+            <!---------------------Select Gender--------------------->
+            <select id="genderList" class="dropdown" style="left:300px;">
+                <option selected disabled value="gender">Choose Gender *</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Both">Both</option>
+            </select>  
+            
+            <!---------------------Select Grade--------------------->
+            <select id="gradeList" class="dropdown" style="left: 400px">
+                <option selected disabled value="grade">Choose Grade *</option>
+                <option value="Grade 9">Grade 9</option>
+                <option value="Grade 10">Grade 10</option>
+                <option value="Grade 11">Grade 11</option>
+                <option value="Grade 12">Grade 12</option>
+                <option value="All grades">All grades</option>
+            </select>
+            
+            <!---------------------Select Category--------------------->
+            <select id="categoryList" class="dropdown" style="position:relative; left: 500px; top: -20px">
+                <option selected disabled value="Choose Category">Choose Category *</option>
+                <option value="Arts">Arts</option>
+                <option value="Sports">Sports</option>
+                <option value="Technology">Technology</option>
+                <option value="Social">Social</option>
+            </select>
+    
+            <!---------------------Select Club--------------------->
+            <select id="clubList" class="dropdown" style="left: -170px; top: 70px">
+                <option selected disabled value="club">Choose Club/Sport</option>
+                <option value="Photography Club">Photography Club</option>
+                <option value="Computer Club">Computer Club</option>
+                <option value="Math Club">Math Club</option>
+                <option value="Social Justice Club">Social Justice Club</option>
+                <option value="Soccer">Soccer</option>
+            </select>
+                
+            <!---------------------Select Priority--------------------->
+            <select id="priorityList" class="dropdown" style="left: -70px; top: 70px">
+                <option selected disabled value="Set Priority">Set Priority</option>
+                <option value="a">Low</option>
+                <option value="b">Medium</option>
+                <option value="c">High</option>
+            </select>
+        
+        <!-------------------------Submit Button------------------------->
+        <input id="submit" type="button" onclick="submitAnnouncement()" value="Create Announcement">
+            
+        <!------------------------Title Input Box------------------------>
+        <input id="titleBox" class="announcement" type="text" placeholder="Title *"
+               onkeydown = "if (event.keyCode == 13)
+                                document.getElementById('submit').click()">
+                
+        <!------------------------Announcement Textarea------------------------>
+        <textarea rows="4" cols="40" placeholder="Enter your announcement here *" id="announcementBox" class="announcement" 
+                  onkeydown = "if (event.keyCode == 13)
+                                document.getElementById('submit').click()"></textarea> 
+        </form>
+        
+        
+        <!---Arrow for the submit button--->
+        <img id="arrow3" src="arrows.png" />
+        </div>
+            
+        
+        <!-------------------------------Navbar------------------------------>
+        <img id="header" src="header.jpg" />
+        <p><a id="headerTitle" href="announcements.html">eAnnouncements</a></p>
+        
+        <div class="dropdownMenu">
+            <img id="headerIcon" src="" />
+            <p id="studentNumber"></p>
+            <div class="dropdown-content">
+                <a href="accountSettings.html">Account Settings</a>
+                <a href="SignUp.html">Use different account</a>
+                <a href="SignIn.html">Sign Out</a>
+            </div>
+        </div>
+        
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+        
+        <ul id="navbarList">
+            <li><a href="announcements.html">Home</a></li>
+            <li><a id="createHeader">Create</a></li>
+            <li><a>Calendar</a></li>
+        </ul>    
+        
+    </body>
+</html>

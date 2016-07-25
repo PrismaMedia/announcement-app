@@ -1,0 +1,254 @@
+* {
+    color: #4A4A4A;
+    font-family: avenir-light;
+    font-size: 35px;
+}
+
+::selection {
+    background: #4A4A4A;
+    color: white;
+}
+
+h1 {
+    font-size: 55px;
+    color: #2B6D6A;
+    position: absolute;
+    top: 180px;
+    left: 300px;
+}
+
+#nameLabel {
+    position: absolute;
+    top: 170px;
+    left: 300px;
+    font-size: 20px;
+}
+
+#personIcon {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 180px;
+    left: 70px;
+    border-radius: 100px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+#frontLayer {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    top: 180px;
+    left: 70px;
+    border-radius: 100px;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+#imageText {
+    position: absolute;
+    top: 90px;
+    left: 18px;
+    font-size: 25px;
+    color: white;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#cameraIcon {
+    position: absolute;
+    top: 335px;
+    left: 155px;
+    height: 35px;
+    transition: 0.5s;
+}
+
+#picture {
+    cursor: pointer;
+}
+
+#picture:hover #frontLayer {
+    opacity: 1;
+}
+
+#picture:hover #imageText {
+    top: 60px;
+    opacity: 1;
+}
+
+#picture:hover #cameraIcon {
+    top: 310px;
+}
+
+#picture:hover #personIcon {
+    color: transparent;
+}
+
+#uploadPic {
+    position: absolute;
+    top: 380px;
+    left: 125px;
+    visibility: hidden;
+}
+
+#header {
+    position: fixed;
+    left: -20px;
+    top: -70px;
+    width:120%;
+    height:160px;
+    transition: 0.3s;
+} 
+
+#headerTitle {
+    position: fixed;
+    top: 15px;
+    left: 120px;
+    color: white;
+    font-family: avenir-light;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#logo {
+    height: 75px;
+    position: fixed;
+    left: 45px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+#navbarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:white;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 30px 0px black;
+    transition: 0.3s;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    color: #4A4A4A;
+    text-align: center;
+    position: relative;
+    left: 50px;
+    padding: 10px 160px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: #afafaf;
+    color: white;
+}
+
+#studentNumber {
+    position: fixed;
+    top: 0px;
+    right: 100px;
+    text-align: right;
+    color: white;
+    font-size: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 7;
+}
+
+.dropdownMenu {
+    position: relative;
+    right: -1125px;
+    top: -900px;
+    width: 120px;
+    height: 40px;
+    z-index: 20;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    left: 1080px;
+    top: 60px;
+    background-color: white;
+    min-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.dropdown-content a {
+    color: #4A4A4A;
+    padding: 8px 16px;
+    font-size: 17px;
+    text-decoration: none;
+    border-bottom: 1px solid #afafaf;
+    display: block;
+}
+
+.dropdown-content a:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.dropdown-content a:first-child:before {
+    content: ' ';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    left: 130px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+}
+
+.dropdown-content a:first-child:hover:before {
+    border-bottom-color: #afafaf;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdown-content:after:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdownMenu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownMenu:hover #studentNumber {
+    color: #afafaf;
+}
+
+#headerIcon {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    border-radius: 100px;
+    object-fit: cover;
+}

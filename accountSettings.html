@@ -1,0 +1,52 @@
+<!---- MIT KAPADIA | ICS3UH-B | APRIL 25, 2016 ---->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Account Settings</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="stylesheet" type="text/css" href="accountSettings.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="accountSettings.js"></script>
+        <script src="nameInSettings.js"></script>
+        <script src="headerScroll.js"></script>
+    </head>
+
+    <body onload="displayName(); picture()">
+        <p id="nameLabel">Name / Student Number :</p>
+        <h1 id="name"></h1>
+
+        <div id="picture">
+            <img id="personIcon" alt="Upload Image" src="" />
+            <div id="frontLayer"><p id="imageText">Upload Image</p></div>
+            <img id="cameraIcon" src="camera.svg" />
+        </div>
+        
+        <input type="file" id="uploadPic" accept="image/*" onchange="upload()" />
+        
+        <!-------------------------------Navbar------------------------------>
+        <img id="header" src="header.jpg" />
+        <p><a id="headerTitle" href="announcements.html">eAnnouncements</a></p>
+        
+        
+        <div class="dropdownMenu">
+            <img id="headerIcon" src="" />
+            <p id="studentNumber"></p>
+            <div class="dropdown-content">
+                <a href="SignUp.html">Use different account</a>
+                <a href="SignIn.html">Sign Out</a>
+            </div>
+        </div>
+        
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+        
+        <ul id="navbarList">
+            <li><a href="announcements.html">Home</a></li>
+            <li><a href="Create.html">Create</a></li>
+            <li><a>Calendar</a></li>
+        </ul>  
+        
+    </body>
+
+</html>

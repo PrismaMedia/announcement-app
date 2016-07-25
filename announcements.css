@@ -1,0 +1,565 @@
+* {
+    color: #4A4A4A;
+    font-family: avenir;
+    font-size: 35px;
+}
+
+::selection {
+    background: #4A4A4A;
+    color: white;
+}
+
+#pageTitle {
+    color: white;
+    position: fixed;
+    top: 0px;
+    margin-top: 270px;
+    left: 450px;
+    font-size: 50px;
+}
+
+#title {
+    position: absolute;
+    top: 0px;
+    left: 155px;
+    z-index: 1;
+}
+
+.card {
+    color: #2B6D6A;
+    background-color: white;
+    position: relative;
+    padding: 15px 15px 0px 25px;
+    font-family: avenir-heavy;
+    font-size: 25px;
+    top: -50px;
+    left: 200px;
+    height: 180px;
+    width: 700px;
+    margin: auto;
+    border-radius: 3px;
+    animation-name: fadeInCard;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInCard {
+    from {opacity: 0;
+    top: -20px;}
+    to {opacity: 1;
+    top: -50px;}
+}
+
+.titleOfCard {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: all 0.2s ease-in-out;
+}
+
+.titleOfCard:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+
+.clubIcon {
+    position: relative;
+    left: 500px;
+    top: -185px;
+    float: left;
+    height: 25px;
+    width: 25px;
+    z-index: 2;
+    animation-name: fadeInClubIcon;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInClubIcon {
+    from {opacity: 0;
+    top: -155px;}
+    to {opacity: 1;
+    top: -185px;}
+}
+
+.club {
+    color: #888888;
+    background-color: transparent;
+    top: -195px;
+    left: 85px;
+    font-family: avenir-light;
+    font-size: 15px;
+    width: 400px;
+    height: 20px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    animation-name: fadeInClub;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInClub {
+    from {opacity: 0;
+    top: -165px;}
+    to {opacity: 1;
+    top: -195px;}
+}
+
+.timeIcon {
+    top: -220px;
+    left: 690px;
+    animation-name: fadeInTimeIcon;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInTimeIcon {
+    from {opacity: 0;
+    top: -190px;}
+    to {opacity: 1;
+    top: -220px;}
+}
+
+.time {
+    color: #888888;
+    background-color: transparent;
+    top: -230px;
+    left: 226px;
+    font-family: avenir-light;
+    font-size: 15px;
+    width: 300px;
+    height: 20px;
+    margin-bottom: 0px;
+    box-shadow: none;
+    z-index: 1;
+    animation-name: fadeInTime;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInTime {
+    from {opacity: 0;
+    top: -200px;}
+    to {opacity: 1;
+    top: -230px;}
+}
+
+.gender {
+    color: #888888;
+    background-color: transparent;
+    top: -265px;
+    left: 375px;
+    font-family: avenir-light;
+    font-size: 15px;
+    width: 40px;
+    height: 20px;
+    margin-bottom: 0px;
+    z-index: 3;
+    animation-name: fadeInGender;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInGender {
+    from {opacity: 0;
+    top: -235px;}
+    to {opacity: 1;
+    top: -265px;}
+}
+
+.genderIcon {
+    left: 970px;
+    top: -290px;
+    height: 28px;
+    z-index: 3;
+    animation-name: fadeInGenderIcon;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInGenderIcon {
+    from {opacity: 0;
+    top: -260px;}
+    to {opacity: 1;
+    top: -290px;}
+}
+
+.content {
+    font-size: 18px;
+    top: -250px;
+    left: 180px;
+    height: 70px;
+    width: 680px;
+    margin-bottom: -340px;
+    overflow-y: scroll;
+    animation-name: fadeInContent;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInContent {
+    from {opacity: 0;
+    top: -220px;}
+    to {opacity: 1;
+    top: -250px;}
+}
+
+.priority {
+    position: relative;
+    top: -95px;
+    left: 475px;
+    height: 195px;
+    width: 12px;
+    border-radius: 3px 0px 0px 3px;
+    animation-name: fadeInPriority;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-out;
+}
+
+@keyframes fadeInPriority {
+    from {opacity: 0;
+    top: -65px;}
+    to {opacity: 1;
+    top: -95px;}
+}
+
+#bgPic {
+    position: fixed;
+    width: 102%;
+    left:-20px;
+    top: 0px;
+    margin-top: -60px;
+}
+
+#noAnnouncements {
+    position: relative;
+    left: 600px;
+    margin-top: 90px;
+    font-size: 25px;
+    visibility: hidden;
+}
+
+select {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    width: 200px;
+    height: 40px;
+    background-color: #2B6D6A;
+    color: white;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+select:hover {
+    background-color: #185a57;
+    box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.6) inset;
+}
+
+#highPriority {
+    position: absolute;
+    top: 380px;
+    left: 90px;
+    font-size: 20px;
+    text-indent: -30px;
+}
+
+#updateButton {
+    position: absolute;
+    top: 450px;
+    left: 40px;
+    font-size: 30px;
+    width: 320px;
+    color: #2B6D6A;
+    background-color: white;
+    outline: none;
+    border: 2px #2B6D6A solid;
+    transition: 0.4s;
+}
+
+#updateButton:hover {
+    color: white;
+    background-color: #2B6D6A;
+}
+
+#arrow4 {
+    position: absolute;
+    top: 465px;
+    left: 240px;
+    width: 60px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+#announcementsWrapper {
+    background-color: #D6D6D6;
+    position: relative;
+    width: 102%;
+    min-height: 570px;
+    top: 550px;
+    left: -15px;
+    margin-top: -80px;
+    margin-bottom: -100px;
+    padding-top: 40px;
+    padding-bottom: 0px;
+    box-shadow: 0px -10px 60px 0px black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.8s;
+}
+
+#filtersWrapper {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 400px;
+    background-color: white;
+    box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.6);
+}
+
+#footer {
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 25px;
+    padding-left: 1040px;
+    background-color: #2B6D6A;
+    color: white;
+    font-size: 20px;
+}
+
+#icicles {
+    height: 55px;
+    position: absolute;
+    left: 965px;
+    top: 10px;
+    border: 3px solid #afafaf;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+#topButton {
+    display: none;
+    position: fixed;
+    top: 550px;
+    right: 10px;
+    z-index: 5;
+    color: #2B6D6A;
+    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transition: 0.3s;
+    background-size: 50px;
+    cursor: pointer;
+}
+
+#topArrow {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    left: 11px;
+    top: 18px;
+    border-right: 3px solid;
+    border-top: 3px solid;
+    border-color: #2B6D6A;
+    transform: rotate(-45deg);
+    transition: 0.3s;
+}
+
+#topButton:hover {
+    color: white;
+    background-color: #2B6D6A;
+}
+
+#topButton:hover #topArrow {
+    border-color: white;
+}
+
+#sortingSection {
+    position: absolute;
+    left: 375px;
+    top: -50px;
+}
+
+#sortTitle
+ {
+    font-size: 17px;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    width: 130px;
+}
+
+#sortingList {
+    width: 250px;
+}
+
+#header {
+    position: fixed;
+    left: -20px;
+    top: -70px;
+    width:120%;
+    height:160px;
+    transition: 0.3s;
+} 
+
+#headerTitle {
+    position: fixed;
+    top: 15px;
+    left: 120px;
+    color: white;
+    font-family: avenir-light;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#logo {
+    height: 75px;
+    position: fixed;
+    left: 45px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+#navbarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:white;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 30px 0px black;
+    transition: 0.3s;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    color: #4A4A4A;
+    text-align: center;
+    position: relative;
+    left: 50px;
+    padding: 10px 160px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: #afafaf;
+    color: white;
+}
+
+#homeHeader {
+    background-color: #2B6D6A;
+    color: white;
+    cursor: default;
+}
+
+#studentNumber {
+    position: fixed;
+    top: 0px;
+    right: 100px;
+    text-align: right;
+    color: white;
+    font-size: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 7;
+}
+
+.dropdownMenu {
+    position: relative;
+    right: -1125px;
+    top: -900px;
+    width: 120px;
+    height: 40px;
+    z-index: 20;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    left: 1030px;
+    top: 60px;
+    background-color: white;
+    min-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.dropdown-content a {
+    color: #4A4A4A;
+    padding: 8px 16px;
+    font-size: 17px;
+    text-decoration: none;
+    border-bottom: 1px solid #afafaf;
+    display: block;
+}
+
+.dropdown-content a:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.dropdown-content a:first-child:before {
+    content: ' ';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    left: 130px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+}
+
+.dropdown-content a:first-child:hover:before {
+    border-bottom-color: #afafaf;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdown-content:after:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdownMenu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownMenu:hover #studentNumber {
+    color: #afafaf;
+}
+
+#headerIcon {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 0.3s;
+}

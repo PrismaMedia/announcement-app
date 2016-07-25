@@ -1,0 +1,46 @@
+<!---- MIT KAPADIA | ICS3UH-B | APRIL 25, 2016 ---->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Sign Up</title>
+        <link rel="icon" type="image/png" href="icon.png">
+        <link rel="stylesheet" type="text/css" href="SignUp.css">
+        
+        <!------------------Links all the JavaScript pages------------------>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="SignUp.js"></script>
+        <script src="hover.js"></script>
+        <script src="underline.js"></script>
+        <script src="names.js"></script>
+    </head>
+
+    <body>
+        <!---------------Heading--------------->
+        <h1 id="signUpTitle">Sign Up</h1>
+        
+        <!----------------Student# and Password Box Input------------------>
+        <input id="studentNumber" type="text" placeholder="Student Number" 
+               onkeydown = "if (event.keyCode == 13)
+                            document.getElementById('signUp').click()">
+        <div id="underline"></div>
+        <input id="password" type="password" placeholder="Password"
+               onkeydown = "if (event.keyCode == 13)
+                            document.getElementById('signUp').click()">
+        <div id="underline2"></div>
+                
+        <!--------------------Sign Up Button---------------------->
+        <input id="signUp" type="button" onclick="signUp()" value="Sign Up">
+        
+        <!--------------------Sign In Button---------------------->
+        <a href="SignIn.html">
+            <button id="signIn" style="border:none">Sign In</button>
+        </a>
+                
+        <!---Arrow for the sign up button--->
+        <img id="arrow" src="arrows.png" />
+        
+        <p id="names"></p>
+    </body>
+</html>

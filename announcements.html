@@ -1,0 +1,123 @@
+<!---- MIT KAPADIA | ICS3UH-B | APRIL 25, 2016 ---->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Announcements</title>
+        <link rel="icon" type="image/png" href="icon.png">        
+        <link rel="stylesheet" type="text/css" href="announcements.css">
+
+        <!------------------Links all the JavaScript pages------------------>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="getAnnouncement.js"></script>
+        <script src="iconForHeader.js"></script>
+        <script src="displayName.js"></script>
+        <script src="parallax.js"></script>
+        <script src="headerScroll.js"></script>
+        <script src="hover.js"></script>
+        <script src="footer2.js"></script>
+        <script src="scrollUp.js"></script>
+        <script src="smoothscroll.js"></script>
+    </head>
+
+    <body onload="displayName(); picture()">
+        <!------------Background Video and Title------------>
+        <video autoplay controls muted poster="norway.png" id="bgPic" loop>
+            <source src="norway.mp4" type="video/mp4" />
+        </video>
+        
+        
+        <!--------------Back to top-------------->
+        <a href="#" id="topButton" class="smoothScroll">
+            <div id="topArrow"></div>
+        </a>
+        
+        <!---------------Footer--------------->
+        <div id="footer">Created by Mit Kapadia
+        <img id="icicles" src="icicles.png"/>
+        </div>
+
+        <h1 id="pageTitle">Announcements</h1>
+        
+        <!----Contains all the announcements---->
+        <div id="announcementsWrapper">
+            <p id="noAnnouncements">There are no announcements at the moment.</p>
+            
+            <!--------------Filters Section-------------->
+            <div id="filtersWrapper">
+                <h1 id="title">Filters</h1>
+                <select id="gender">
+                    <option selected disabled value="gender">Choose Gender</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                
+                <select id="grade" style="top: 170px">
+                    <option selected disabled value="grade">Choose Grade</option>
+                    <option value="Grade 9">Grade 9</option>
+                    <option value="Grade 10">Grade 10</option>
+                    <option value="Grade 11">Grade 11</option>
+                    <option value="Grade 12">Grade 12</option>
+                </select>
+                
+                <select id="category" style="top: 240px">
+                    <option selected disabled value="category">Choose Category</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Sports">Sports</option>
+                    <option value="Technology">Technology</option>
+                    <option value="Social">Social</option>
+                </select>
+                
+                <select id="club" style="top: 310px">
+                    <option selected disabled value="club">Choose Club/Sport</option>
+                    <option value="Photography Club">Photography Club</option>
+                    <option value="Computer Club">Computer Club</option>
+                    <option value="Math Club">Math Club</option>
+                    <option value="Social Justice Club">Social Justice Club</option>
+                    <option value="Soccer">Soccer</option>
+                </select>
+                
+                <label id="highPriority"><input type="checkbox" id="highPriorityCheckBox" value="High">Only Display High Priority Announcements</label>
+
+                <!-----------------Update Button---------------->
+                <button id="updateButton" onclick="getAnnouncement()">Update Announcements</button>
+                
+                <!---Arrow for the update button--->
+                <img id="arrow4" src="arrows.png" />
+            </div>
+            
+            <!-----------Sorting Section------------>
+            <div id="sortingSection">
+                <p id="sortTitle">Sort by:</p>
+                <select id="sortingList">
+                    <option selected value="latest">Latest Announcement First</option>
+                    <option value="oldest">Oldest Announcement First</option>
+                    <option value="priority">Highest Priority First</option>
+                </select>
+            </div>
+        </div>
+
+        <!-----------------------Navbar----------------------->
+        <img id="header" src="header.jpg" />
+
+        <p><a id="headerTitle" href="announcements.html">eAnnouncements</a></p>
+        
+        <div class="dropdownMenu">
+            <img id="headerIcon" src="" />
+            <p id="studentNumber"></p>
+            <div class="dropdown-content">
+                <a href="accountSettings.html">Account Settings</a>
+                <a href="SignUp.html">Use different account</a>
+                <a href="SignIn.html">Sign Out</a>
+            </div>
+        </div>
+        
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+
+        <ul id="navbarList">
+            <li><a id="homeHeader">Home</a></li>
+            <li><a href="Create.html">Create</a></li>
+            <li><a>Calendar</a></li>
+        </ul>
+    </body>    
+</html>

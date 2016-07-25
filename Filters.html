@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="icon" type="image/png" href="icon.png">
+        <script src="filters.js"></script>
+        <title>Filters</title>
+        <style>
+            * {
+                color: #4A4A4A;
+                font-family: avenir-light;
+                font-size: 35px;
+            }
+            
+            #header {
+                position: fixed;
+                left: -20px;
+                top: -70px;
+                width:120%;
+                height:160px;
+                transition: 0.3s;
+            } 
+            
+            #headerTitle {
+                position: fixed;
+                top: 15px;
+                left: 120px;
+                color: white;
+                font-family: avenir-light;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            
+            #logo {
+                height: 75px;
+                position: fixed;
+                left: 45px;
+                top: 6px;
+                transition: 0.3s;
+            }
+            
+            #navbarList {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                background-color:white;
+                position: fixed;
+                top: 80px;
+                left: 0px;
+                width: 100%;
+                box-shadow: 0px 0px 30px 0px black;
+                transition: 0.3s;
+            }
+            
+            li {
+                float: left;
+            }
+            
+            li a {
+                display: block;
+                font-size: 20px;
+                color: #4A4A4A;
+                text-align: center;
+                position: relative;
+                left: 50px;
+                padding: 10px 160px;
+                text-decoration: none;
+                transition: 0.3s;
+            }
+            
+            li a:hover {
+                background-color: #afafaf;
+                color: white;
+            }
+            
+            #studentNumber {
+                position: fixed;
+                top: 0px;
+                right: 30px;
+                text-align: right;
+                color: white;
+                font-size: 25px;
+                transition: 0.3s;
+                z-index: 7;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <br><br><br>
+        <h1>Select Filters</h1>
+    
+        <select id="gender">
+            <option selected disabled value="gender">Choose gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <button id="update" onclick="filter()">Update Announcements</button>
+        
+        <!----------------------Navbar---------------------->
+        <img id="header" src="header.jpg" />
+        <p><a id="headerTitle" href="announcements.html">eAnnouncements</a></p>
+        <p id="studentNumber"></p>
+        <object type="image/svg+xml" data="announcementicon.svg" id="logo">Your browser does not support SVG</object>
+        
+        <ul id="navbarList">
+            <li><a href="announcements.html" >Home</a></li>
+            <li><a href="Create.html">Create</a></li>
+            <li><a>Calendar</a></li>
+        </ul>    
+    </body>
+</html>

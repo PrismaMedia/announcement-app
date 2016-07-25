@@ -1,0 +1,322 @@
+* {
+    color: #4A4A4A;
+    font-family: avenir-light;
+    font-size: 35px;
+}
+
+::selection {
+    background: #4A4A4A;
+    color: white;
+}
+
+.announcement {
+    position: relative;
+    background-color: #cbcbcb;
+    color: #4A4A4A;
+    top: 150px;
+    left: 429px;
+    width: 600px;
+    height: 200px;
+    font-size: 20px;
+    vertical-align: text-top;
+    transition: 0.25s;
+    padding-left: 15px;
+    padding-top: 10px;
+    border: none;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    color: gray;
+}
+
+.announcement:focus {
+    background-color: #afafaf;
+    color: white;
+}
+
+#titleBox {
+    font-family: avenir-heavy;
+    height:40px;
+    position:relative;
+    left: -180px;
+    top:220px;
+    padding-top: 0px;
+}
+
+.title {
+    position: relative;
+    text-align: center;
+    left: 60px;
+    top: 440px;
+}
+#submit {
+    position: relative;
+    bottom: -560px;
+    left: 440px;
+    color: #2B6D6A;
+    background-color: white;
+    width: 600px;
+    outline: none;
+    border: 2px #2B6D6A solid;
+    transition: 0.4s;
+    margin-bottom: 80px;
+    z-index: 1;
+}
+
+#submit:hover {
+    color: white;
+    background-color: #2B6D6A;
+}
+
+#arrow3 {
+    width: 60px;
+    position: relative;
+    left: 880px;
+    top: 210px;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 1;
+}
+
+.dropdown {
+    position: relative;
+    top: -20px;
+    left: 460px;
+    width: 200px;
+    height: 40px;
+    background-color: #2B6D6A;
+    color: white;
+    font-size: 20px;
+    border: none;
+    outline: none;
+    transition: 0.2s;
+}
+
+.dropdown:hover {
+    background-color: #185a57;
+    box-shadow: 0px -1px 10px 0px rgba(0,0,0,0.6) inset;
+}
+
+#bgPic {
+    position: fixed;
+    width: 102%;
+    left:-20px;
+    top: 0px;
+    margin-top: -40px;
+}
+
+#pageTitle {
+    color: white;
+    position: fixed;
+    top: 0px;
+    left: 400px;
+    margin-top: 250px;
+    font-size: 50px;
+}
+
+#bodyContainer {
+    background-color: transparent;
+    position: relative;
+    width: 1340px;
+    height: 900px;
+    top: 480px;
+    left: -15px;
+    margin: -50px;
+    margin-bottom: 0px;
+    padding-top: 30px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.8s;
+    background-image: url(triangle.png);
+    background-position: -195px 0px;
+    box-shadow: 0px 25px 40px 0px rgba(0,0,0,0.4);
+}
+
+#footer {
+    position: fixed;
+    height: 55px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 25px;
+    padding-left: 1040px;
+    background-color: #2B6D6A;
+    color: white;
+    font-size: 20px;
+}
+
+#icicles {
+    height: 55px;
+    position: absolute;
+    left: 965px;
+    top: 10px;
+    border: 3px solid #afafaf;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+#header {
+    position: fixed;
+    left: -20px;
+    top: -70px;
+    width:120%;
+    height:160px;
+    transition: 0.3s;
+} 
+
+#headerTitle {
+    position: fixed;
+    top: 15px;
+    left: 120px;
+    color: white;
+    font-family: avenir-light;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#logo {
+    height: 75px;
+    position: fixed;
+    left: 45px;
+    top: 6px;
+    transition: 0.3s;
+}
+
+#navbarList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:white;
+    position: fixed;
+    top: 80px;
+    left: 0px;
+    width: 100%;
+    box-shadow: 0px 0px 30px 0px black;
+    transition: 0.3s;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    font-size: 20px;
+    color: #4A4A4A;
+    text-align: center;
+    position: relative;
+    left: 50px;
+    padding: 10px 160px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+li a:hover {
+    background-color: #afafaf;
+    color: white;
+}
+
+#createHeader {
+    background-color: #2B6D6A;
+    color: white;
+    cursor: default;
+}
+
+#studentNumber {
+    position: fixed;
+    top: 0px;
+    right: 100px;
+    text-align: right;
+    color: white;
+    font-size: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 7;
+}
+
+.dropdownMenu {
+    position: relative;
+    right: -1125px;
+    top: -900px;
+    width: 120px;
+    height: 40px;
+    z-index: 20;
+}
+
+.dropdown-content {
+    display: none;
+    position: fixed;
+    left: 1030px;
+    top: 60px;
+    background-color: white;
+    min-width: 150px;
+    border-radius: 4px;
+    box-shadow: 0 3px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    z-index: 18;
+}
+
+.dropdown-content a {
+    color: #4A4A4A;
+    padding: 8px 16px;
+    font-size: 17px;
+    text-decoration: none;
+    border-bottom: 1px solid #afafaf;
+    display: block;
+}
+
+.dropdown-content a:first-child {
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+}
+
+.dropdown-content a:first-child:before {
+    content: ' ';
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    left: 130px;
+    top: -20px;
+    border: 10px solid transparent;
+    border-bottom-color: white;
+}
+
+.dropdown-content a:first-child:hover:before {
+    border-bottom-color: #afafaf;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+    border-bottom-right-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.dropdown-content a:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdown-content:after:hover {
+    color: white;
+    background-color: #afafaf;
+}
+
+.dropdownMenu:hover .dropdown-content {
+    display: block;
+}
+
+.dropdownMenu:hover #studentNumber {
+    color: #afafaf;
+}
+
+#headerIcon {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    border-radius: 100px;
+    object-fit: cover;
+    transition: 0.3s;
+}
